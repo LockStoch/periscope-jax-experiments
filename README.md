@@ -33,12 +33,9 @@ cd /scratch/pawsey1384/lockstoch
 
 git clone -b simple     https://github.com/LockStoch/periscope-jax.git periscope-simple
 git clone -b jax-simple https://github.com/LockStoch/periscope-jax.git periscope-jax
+git clone https://github.com/LockStoch/periscope-jax-experiments.git jax-test
 
-mkdir -p jax-test/meshes
-cd jax-test/meshes
-wget https://github.com/dengwirda/periscope/releases/download/data-v1/mesh_w_elev_cvt_7.zip
-unzip mesh_w_elev_cvt_7.zip
-cd ../..
+bash jax-test/fetch_meshes.sh
 
 module load python/3.11.6
 
