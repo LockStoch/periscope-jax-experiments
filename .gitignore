@@ -1,0 +1,6 @@
+*-venv/
+meshes/
+plots*/
+*.nc
+*.out
+__pycache__/
