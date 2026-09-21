@@ -15,16 +15,10 @@ float32-rounding levels, that's a bug in the port. If CPU and GPU
 `jax-simple` disagree at all, that's a bug too, it's the exact same
 compiled JAX code either way, just dispatched to different hardware.
 
-## Why GPU needs the unsupported module tree
-
 Setonix's *supported* module tree only has ROCm up to `6.4.1`, but the
 actively-maintained ROCm build of JAX needs ROCm 7.x, current releases
 don't target 6.x at all. `rocm/7.2.4` exists, but only via
-`ml use /software/setonix/unsupported/`, a second, undocumented module
-tree Pawsey doesn't officially support or commit to maintaining. We've
-asked Pawsey to promote this to a supported path (see the support
-ticket drafted separately); until/unless that happens, this is what
-we've got, and it does work.
+`ml use /software/setonix/unsupported/`.
 
 ## One-time setup
 
